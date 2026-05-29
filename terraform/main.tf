@@ -120,7 +120,7 @@ resource "google_cloud_run_v2_service" "backend" {
     ]
   }
 
-  depends_on = [google_project_service.enabled_apis, google_service_account.backend_sa, google_sql_database_instance.main]
+  depends_on = [google_project_service.enabled_apis, google_service_account.backend_sa]
 }
 
 # Allow unauthenticated access to the Backend (since Frontend calls it directly from browser)
